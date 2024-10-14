@@ -1,0 +1,36 @@
+﻿@model IEnumerable<BarberShop.Models.Appointment>
+
+@{
+    ViewData["Title"] = "Randevular";
+}
+
+<h1 class="appointments-title">Randevularım</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>İsim Soyisim</th>
+            <th>Telefon Numarası</th>
+            <th>Randevu Tarihi</th>
+            <th>Hizmet</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var appointment in Model)
+        {
+            <tr>
+                <td>@appointment.CustomerName</td>
+                <td>@appointment.PhoneNumber</td>
+                <td>@appointment.AppointmentDate.ToString("MM/dd/yyyy")</td>
+                <td>@appointment.ServiceId</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Appointments", new { id = appointment.Id })">Düzenle</a> //
+                    <a href="@Url.Action("Cancel", "Appointments", new { id = appointment.Id })">İptal Et</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create", "Appointments")">Yeni Randevu Al</a>

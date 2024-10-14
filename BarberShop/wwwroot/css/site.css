@@ -1,0 +1,153 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e0f7fa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+header {
+    background: #00796b;
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    padding: 20px;
+    color: #ff5722;
+    font-weight: bold;
+}
+
+.table-container {
+    margin: 20px 0;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    table th, table td {
+        border: 1px solid #cccccc;
+        text-align: left;
+        padding: 12px;
+    }
+
+    table th {
+        background-color: #00796b;
+        color: white;
+        font-size: 1.1rem;
+    }
+
+a {
+    color: #00796b;
+    font-weight: bold;
+}
+
+    a:hover {
+        color: #ff5722;
+    }
+
+form {
+    margin: 20px 0;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    form input, form select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+/*rendevu css*/
+.appointments-title {
+    color: #00796b; /* Lacivert */
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+
+
+/* Hero Section */
+.hero {
+    background-image: url('/images/aletler.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 0;
+    background-blend-mode: overlay;
+    //background-color: rgba(0, 121, 107, 0.7);
+}
+
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+/* Service Cards */
+.card {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+    .card:hover {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+.price {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #28a745
+}
+
+
+/* Testimonials */
+.testimonials {
+    background-color: #f1f8e9;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.testimonial {
+    border-left: 5px solid #ff5722;
+    padding-left: 15px;
+    margin: 10px 0;
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+blockquote {
+    margin: 0;
+    font-style: italic;
+    color: #00796b;
+}
+

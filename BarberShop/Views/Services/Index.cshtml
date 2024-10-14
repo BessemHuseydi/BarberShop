@@ -1,0 +1,29 @@
+﻿@model IEnumerable<BarberShop.Models.Service>
+
+@{
+    ViewData["Title"] = "Hizmetlerimiz";
+}
+
+<header>
+    <h1>@ViewData["Title"]</h1>
+</header>
+
+<table>
+    <thead>
+        <tr>
+            <th>Hizmet Adı</th>
+            <th>Fiyat</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var service in Model)
+        {
+            <tr>
+                <td>@service.Name</td>
+                <td>@service.Price.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Appointments/Create">Randevu Al</a>

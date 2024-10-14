@@ -1,0 +1,35 @@
+﻿@model BarberShop.Models.Appointment
+
+@{
+    ViewData["Title"] = "Randevu Düzenle";
+}
+
+<h1>Randevu Düzenle</h1>
+
+<form asp-action="Update" method="post">
+    <div>
+        <label for="CustomerName">İsim Soyisim:</label>
+        <input type="text" id="CustomerName" name="CustomerName" value="@Model.CustomerName" required />
+    </div>
+    <div>
+        <label for="PhoneNumber">Telefon Numarası:</label>
+        <input type="text" id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber" required />
+    </div>
+    <div>
+        <label for="AppointmentDate">Randevu Tarihi:</label>
+        <input type="date" id="AppointmentDate" name="AppointmentDate" value="@Model.AppointmentDate.ToString("yyyy-MM-dd")" required />
+    </div>
+    <div>
+        <label for="Service">Hizmet:</label>
+        <select id="Service" name="ServiceId">
+            <!-- Hizmetleri buraya ekleyin
+             <option value="1" @(Model.ServiceId == 1 ? "selected" : "")>Hizmet 1</option>
+             <option value="2" @(Model.ServiceId == 2 ? "selected" : "")>Hizmet 2</option>
+             <option value="3" @(Model.ServiceId == 3 ? "selected" : "")>Hizmet 3</option>
+              -->
+        </select>
+    </div>
+    <div>
+        <button type="submit" class="btn">Randevuyu Güncelle</button>
+    </div>
+</form>

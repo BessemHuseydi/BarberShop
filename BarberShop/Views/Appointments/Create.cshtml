@@ -1,0 +1,33 @@
+﻿@model BarberShop.Models.Appointment
+
+@{
+    ViewData["Title"] = "Randevu Al";
+}
+
+<header>
+    <h1>@ViewData["Title"]</h1>
+</header>
+
+<form asp-action="Create">
+    <div>
+        <label>İsim Soyisim:</label>
+        <input asp-for="CustomerName" required />
+    </div>
+    <div>
+        <label>Telefon Numarası:</label>
+        <input asp-for="PhoneNumber" required />
+    </div>
+    <div>
+        <label>Randevu Tarihi:</label>
+        <input asp-for="AppointmentDate" type="datetime-local" required />
+    </div>
+    <div>
+        <label>Hizmet Seç:</label>
+        <select asp-for="ServiceId">
+            <option value="1">Klasik Saç Kesimi</option>
+            <option value="2">Saç Düzleştirme</option>
+            <option value="3">Sakal Tasarımı</option>
+        </select>
+    </div>
+    <button type="submit">Randevu Al</button>
+</form>
