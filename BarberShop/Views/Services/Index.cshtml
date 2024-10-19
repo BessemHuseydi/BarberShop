@@ -1,12 +1,29 @@
 ﻿@model IEnumerable<BarberShop.Models.Service>
+<title>Hizmetler - BarberShop</title>
 
-@{
-    ViewData["Title"] = "Hizmetlerimiz";
-}
+<a href="../Views/Services/Index" class="brand-logo00">
+    <h3 class="logo-text00">Hizmetler</h3>
+</a>
 
-<header>
-    <h1>@ViewData["Title"]</h1>
-</header>
+<style>
+    .brand-logo00 {
+        text-decoration: none; /* Remove underline from the link */
+        display: flex; /* Use flexbox for centering */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 100px; /* Adjust height for better alignment */
+    }
+
+    .logo-text00 {
+        font-size: 35px; /* Adjusted font size */
+        color: rgb(255, 87, 51); /* Set the desired color */
+        margin: 0; /* Remove default margin */
+        text-align: center; /* Center text */
+    }
+</style>
+<link rel="stylesheet" href="~/css/servicesCSS.css" />
+
+
 
 <table>
     <thead>
