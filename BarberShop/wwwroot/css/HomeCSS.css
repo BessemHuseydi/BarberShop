@@ -56,7 +56,8 @@ body {
     border: none;
     border-radius: 8px; /* Reduced border radius for a sharper look */
     overflow: hidden;
-    width: 200px;
+    display: flex;
+    justify-content: center;
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions for hover effects */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
@@ -68,17 +69,20 @@ body {
 
 .card-img-top {
     height: 200px; /* Fixed height for images */
-    width: 200px;
+    display: flex;
+    justify-content: center;
     object-fit: cover; /* Ensure the image covers the area */
 }
 
 .card-body {
+    display:flex;
+    justify-content:center;
     padding: 15px; /* Comfortable padding */
     display: flex; /* Use flexbox to arrange elements */
     flex-direction: column; /* Stack elements vertically */
     justify-content: space-between; /* Space elements evenly */
     height: 100%; /* Allow full height */
-    width:200px;
+/*    width:200px;*/
 }
 
 .card-title {
@@ -86,6 +90,8 @@ body {
     font-weight: bold; /* Bold font for emphasis */
     margin-bottom: 10px; /* Space below title */
     color: #333; /* Title color */
+    display:flex;
+    justify-content: center;
 }
 
 .card-text {
@@ -93,6 +99,8 @@ body {
     color: #666; /* Lighter color for body text */
     font-size: 0.95em; /* Slightly smaller font size */
     line-height: 1.5; /* Line height for readability */
+    display: flex;
+    justify-content: center;
 }
 
 .price {
@@ -127,7 +135,7 @@ body {
 
     .card {
         margin-bottom: 20px; /* Add space between cards */
-        width: 200px;
+        
     }
 }
 
