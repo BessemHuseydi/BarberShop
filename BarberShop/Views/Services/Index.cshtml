@@ -1,0 +1,46 @@
+﻿@model IEnumerable<BarberShop.Models.Service>
+<title>Hizmetler - BarberShop</title>
+
+<a href="../Views/Services/Index" class="brand-logo00">
+    <h3 class="logo-text00">Hizmetler</h3>
+</a>
+
+<style>
+    .brand-logo00 {
+        text-decoration: none; /* Remove underline from the link */
+        display: flex; /* Use flexbox for centering */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 100px; /* Adjust height for better alignment */
+    }
+
+    .logo-text00 {
+        font-size: 35px; /* Adjusted font size */
+        color: rgb(255, 87, 51); /* Set the desired color */
+        margin: 0; /* Remove default margin */
+        text-align: center; /* Center text */
+    }
+</style>
+<link rel="stylesheet" href="~/css/servicesCSS.css" />
+
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Hizmet Adı</th>
+            <th>Fiyat</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var service in Model)
+        {
+            <tr>
+                <td>@service.Name</td>
+                <td>@service.Price.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Appointments/Create">Randevu Al</a>

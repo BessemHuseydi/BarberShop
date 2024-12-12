@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üye Ol - BarberShop</title>
+    <link rel="stylesheet" href="~/css/loginCSS.css">
+</head>
+<body>
+
+    <div class="membership-form-area">
+        <div class="membership-form-inner">
+            <nav class="membership-navigation">
+                <a href="/login">Giriş Yap</a>
+                <a class="active" href="#">Üye Ol</a>
+            </nav>
+
+            <form id="registrationForm" class="membership-form" action="/register" method="post">
+                <div class="form-control">
+                    <input id="j_username" name="j_username" class="form-input" placeholder="E-Posta Adresi" type="email" required>
+                    <div class="messages"></div>
+                </div>
+
+                <div class="form-control">
+                    <input id="j_password" name="j_password" class="form-input" placeholder="Şifre" type="password" required>
+                    <div class="messages"></div>
+                </div>
+
+                <div class="form-control">
+                    <input id="j_confirm_password" name="j_confirm_password" class="form-input" placeholder="Şifreyi Onayla" type="password" required>
+                    <div class="messages"></div>
+                </div>
+
+                <div class="form-helper">
+                    <div class="terms">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">Kullanım şartlarını kabul ediyorum</label>
+                    </div>
+                </div>
+
+                <div class="box-actions">
+                    <button type="submit" class="button">Üye Ol</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

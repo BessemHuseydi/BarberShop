@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Giriş Yap - BarberShop</title>
+    <link rel="stylesheet" href="~/css/loginCSS.css"> 
+</head>
+<body>
+
+    <div class="membership-form-area">
+        <div class="membership-form-inner">
+            <nav class="membership-navigation">
+                <a class="active">Giriş Yap</a>
+                <a href="\login\uyeol">Üye Ol</a>
+            </nav>
+            <form id="mainLoginForm" class="membership-form js-form-validate" action="/j_spring_security_check" method="post">
+                <div class="form-control">
+                    <div class="form__group">
+                        <div class="form-control variant:line">
+                            <input id="j_username" name="j_username" class="form-input" tabindex="1" placeholder="E-Posta Adresi / Telefon Numarası" type="text" value="">
+                        </div>
+                        <div class="messages"></div>
+                    </div>
+                </div>
+
+                <div class="form-control password js-password">
+                    <div class="form__group">
+                        <div class="form-control variant:line">
+                            <input id="j_password" name="j_password" class="form-input" tabindex="2" placeholder="Şifre" type="password" value="">
+                        </div>
+                        <div class="messages"><p class="help-block error">Bir değer giriniz.</p></div>
+                    </div>
+                    <div class="show-password js-show-password">
+                        <svg class="icon-sprite">
+                            <use xlink:href="/_ui/responsive/theme-mavi/images/icons/allicons.svg#eye"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="form-helper">
+                    <div class="remember-me">
+                        <div class="form__group">
+                            <input type="checkbox" id="remember_me" name="remember_me">
+                            <label for="remember_me">Beni Hatırla</label>
+                        </div>
+                    </div>
+                    <div class="forget-password">
+                        <a href="#" id="forgotten-password">Şifremi Unuttum</a>
+                    </div>
+                </div>
+
+                <div class="box-actions">
+                    <button type="submit" class="button button-outline bg-dark " id="login-submit" tabindex="4">Giriş Yap</button>
+                    
+                </div>
+
+                <input type="hidden" name="CSRFToken" value="e59628c7-4f12-4992-87d9-c1dcadb83b75">
+            </form>
+
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+            <script>
+                window.fbAsyncInit = function () {
+                    FB.init({
+                        appId: 169653167210163,
+                        cookie: true,
+                        xfbml: true,
+                        version: 'v6.0'
+                    });
+                };
+
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) { return; }
+                    js = d.createElement(s); js.id = id;
+                    js.src = "https://connect.facebook.net/tr_TR/sdk.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+        </div>
+    </div>
+
+</body>
+</html>
