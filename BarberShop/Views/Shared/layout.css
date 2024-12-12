@@ -1,4 +1,4 @@
-/* Genel Ayarlar */
+ï»¿/* Genel Ayarlar */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -13,7 +13,7 @@ body {
     padding: 0 20px;
 }
 
-/* Başlık Ayarları */
+/* BaÅŸlÄ±k AyarlarÄ± */
 header {
     background-color: #282c34;
     padding: 15px 0;
@@ -54,7 +54,7 @@ header {
         color: white;
     }
 
-/* Hero Alanı */
+/* Hero AlanÄ± */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero-bg.jpg') no-repeat center center/cover;
     color: white;

@@ -1,96 +1,79 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@{
+    ViewData["Title"] = "Home - Berber Shop";
+}
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="~/css/HomeCSS.css" />
-    <title>Ana Sayfa - BarberShop</title>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
 </head>
+<style>
+    .card-img-top {
+        object-fit: cover; /* Resmi kesmeden alanı doldurur */
+        height: 200px; /* Tüm img için aynı yükseklik */
+        width: 100%; /* Tüm img genişliğini doldurur */
+    }
+</style>
+<div class="hero">
+    <h1>Welcome to Berber Shop</h1>
+    <p>Your modern grooming experience starts here.</p>
+    <a class="btn btn-primary" asp-controller="Home" asp-action="rendevu">Book an Appointment</a>
+</div>
 
 
-<body>
 
-    <div class="hero" style="background: url('../images/aletler.jpg') no-repeat center center / cover;">
-        <h1 class="display-4">BarberShop'a Hoş Geldiniz!</h1>
-        <p class="lead">En iyi berber hizmetleri şimdi parmaklarınızın ucunda.</p>
-        <a href="/Appointments/Create" class="btn btn-light btn-lg">Randevu Al</a>
-    </div>
-
-    <div class="container mt-5" >
-        <h2 class="text-center mb-4" style=" color: rgb(255, 87, 51); /* Set the desired color */
-            margin: 0; /* Remove default margin */
-            text-align: center; font-size:35px">
-            Hizmetlerimiz
-        </h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <img src="~/images/resimSakalTasarimi.jpg" class="card-img-top" alt="Klasik Saç Kesimi" />
-                    <div class="card-body">
-                        <h5 class="card-title">Klasik Saç Kesimi</h5>
-                        <p class="card-text">Saç stilinizi yenileyin. Uzman berberlerimizle klasik bir saç kesimi deneyimi yaşayın.</p>
-                        <p class="price">Fiyat: 50 TL</p>
-                        <a href="/Appointments/Create" class="btn btn-primary">Randevu Al</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <img src="~/images/resimSacDuzlestirme.jpg" class="card-img-top" alt="Saç Düzleştirme" />
-                    <div class="card-body">
-                        <h5 class="card-title">Saç Düzleştirme</h5>
-                        <p class="card-text">Saçlarınızı düzleştirin ve gerektiğinde mükemmel görünüm kazandırın.</p>
-                        <p class="price">Fiyat: 80 TL</p>
-                        <a href="/Appointments/Create" class="btn btn-primary">Randevu Al</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <img src="~/images/resimSac.jpg" class="card-img-top" alt="Sakal Tasarımı" />
-                    <div class="card-body">
-                        <h5 class="card-title">Sakal Tasarımı</h5>
-                        <p class="card-text">Sakal tarzınızı belirleyin. Uzman ekibimiz en trend sakal tasarımlarını sunar.</p>
-                        <p class="price">Fiyat: 40 TL</p>
-                        <a href="/Appointments/Create" class="btn btn-primary">Randevu Al</a>
-                    </div>
-                </div>
+<div class="container mt-5">
+    <h2 class="text-center">Our Services</h2>
+    <div class="d-flex justify-content-around flex-wrap mt-4">
+        <div class="card" style="width: 18rem;">
+            <img src="~/img/sac1.jpg" class="card-img-top" alt="Haircut">
+            <div class="card-body">
+                <h5 class="card-title">Haircut</h5>
+                <p class="card-text">Professional haircuts tailored to your style.</p>
+                <a href="/rendevu" class="btn btn-primary">Randevu Al</a>
             </div>
         </div>
-
-
-       
-    </div>
-
-    <section class="cards" id="services">
-        <div class="content">
-            <div class="card">
-                <img src="photo/gs.jpg" alt="galatasaray">
-                <div class="icon"><i class='bx bxs-invader'></i></div>
-                <div class="info">
-                    <h3>En Sevdigim takım</h3>
-                    <p>Galatasaray</p><a href="https://g.co/kgs/7rYRZU"> <br>  > takımı gör </a>
-                </div>
-            </div><div class="card">
-                <img src="photo/hobı.webp" alt="hobıler">
-                <div class="icon"><i class='bx bx-planet'></i></div>
-                <div class="info">
-                    <h3>Hobiler</h3>
-                    <p>Futbol <br>Play Game Video</p>
-                </div>
-            </div><div class="card">
-                <img src="/photo/hobı.webp" alt="bizim ev">
-                <div class="icon"><i class='bx bxl-spotify'></i></div>
-                <div class="info">
-
-                    <h3> En Sevdigim Müzikler</h3>
-                    <p>Çalma Listesi </p>
-                    <a href="https://open.spotify.com/playlist/4w4PXwNbULdeB37Go8VwGw?si=f09beb9a85184678"> <br> > Müziklere git  </a>
-                </div>
+        <div class="card" style="width: 18rem;">
+            <img src="~/img/sac2.jpg" class="card-img-top" alt="Shaving">
+            <div class="card-body">
+                <h5 class="card-title">Shaving</h5>
+                <p class="card-text">Traditional and modern shaving techniques.</p>
+                <a href="/rendevu" class="btn btn-primary">Randevu Al</a>
             </div>
         </div>
-    </section>
+        <div class="card" style="width: 18rem;">
+            <img src="~/img/sac3.jpg" class="card-img-top" alt="Beard Trim">
+            <div class="card-body">
+                <h5 class="card-title">Beard Trim</h5>
+                <p class="card-text">Perfectly styled beard trims to enhance your look.</p>
+                <a href="/rendevu" class="btn btn-primary">Randevu Al</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="~/img/alet1.jpg" class="card-img-top" alt="Haircut">
+            <div class="card-body">
+                <h5 class="card-title">Haircut Tools</h5>
+                <p class="card-text">Premium-quality tools for precise and professional haircuts.</p>
+                
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="~/img/alet2.jpg" class="card-img-top" alt="Shaving">
+            <div class="card-body">
+                <h5 class="card-title">Modern Barber Shop</h5>
+                <p class="card-text">Experience the ultimate grooming in our state-of-the-art barber shop.</p>
+             
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="~/img/alet3.jpg" class="card-img-top" alt="Beard Trim">
+            <div class="card-body">
+                <h5 class="card-title">Beard Care Tools</h5>
+                <p class="card-text">High-grade tools designed for flawless beard grooming and styling.</p>
+               
+            </div>
+        </div>
+    </div>
+</div>
 
-   
-</body>
-</html>
